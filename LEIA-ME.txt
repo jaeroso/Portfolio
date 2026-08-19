@@ -14,10 +14,11 @@ script.js              Todo o JS do site (abre/fecha o visualizador de PDF em ce
 assets/img/            Imagens do site (ver pendência abaixo)
 assets/pdfs/           PDFs dos certificados (ver pendência abaixo)
 
-Os links entre páginas usam caminhos absolutos (ex: "/perfil/", "/style.css"),
-então o site deve ser publicado na raiz do domínio (funciona bem em GitHub
-Pages com domínio próprio, Netlify, Vercel, etc.). Se for hospedar dentro de
-uma subpasta, ajuste esses caminhos.
+Os links entre páginas usam caminhos relativos (ex: "perfil/index.html",
+"../style.css"), então o site funciona tanto abrindo os arquivos direto no
+navegador (duplo clique / file://) quanto hospedado em qualquer lugar —
+raiz de domínio, subpasta, GitHub Pages, Netlify, etc. Não precisa de
+configuração extra de servidor.
 
 PENDÊNCIAS — o .zip enviado não continha estes arquivos
 ---------------------------------------------------------
