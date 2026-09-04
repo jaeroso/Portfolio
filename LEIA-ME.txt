@@ -1,0 +1,47 @@
+SITE ESTÁTICO — João Marcelo | Portfólio Técnico
+=================================================
+
+Estrutura
+---------
+index.html            Página inicial (/)
+perfil/index.html      Página /perfil/
+projetos/index.html    Página /projetos/
+curriculo/index.html   Página /curriculo/
+certificados/index.html Página /certificados/
+404.html               Página de erro (rota não encontrada)
+style.css              Todo o CSS do site (um único arquivo, compartilhado)
+script.js              Todo o JS do site (abre/fecha o visualizador de PDF em certificados/)
+assets/img/            Imagens do site (ver pendência abaixo)
+assets/pdfs/           PDFs dos certificados (ver pendência abaixo)
+
+Os links entre páginas usam caminhos relativos (ex: "perfil/index.html",
+"../style.css"), então o site funciona tanto abrindo os arquivos direto no
+navegador (duplo clique / file://) quanto hospedado em qualquer lugar —
+raiz de domínio, subpasta, GitHub Pages, Netlify, etc. Não precisa de
+configuração extra de servidor.
+
+PENDÊNCIAS — o .zip enviado não continha estes arquivos
+---------------------------------------------------------
+1) IMAGENS (assets/img/)
+   No projeto original as imagens eram servidas de um domínio remoto
+   (/manus-storage/...) e não estavam incluídas no .zip. Os arquivos HTML já
+   apontam para os nomes originais dentro de assets/img/ — basta adicionar os
+   arquivos com esses mesmos nomes:
+     - joao-ja-monogram_06718d45.png   (logo/monograma JA, usado em várias páginas)
+     - joao-home-atelier_125a5f96.jpg  (Início)
+     - joao-profile-drawing_b65069d9.jpg (Perfil)
+     - joao-code-editorial_54e14de5.jpg  (Perfil)
+     - joao-modelagem-editorial_69dcefe6.jpg (Perfil)
+     - joao-projects-interface_20dbdfc5.jpg (Projetos)
+
+2) CERTIFICADOS (assets/pdfs/ + conteúdo da página /certificados/)
+   O arquivo de dados dos certificados (client/src/data/certificates.ts) não
+   estava no .zip — só o teste automatizado que o validava. Criei 3 cartões
+   de exemplo com texto "[Substituir: ...]" na página certificados/index.html.
+   Para cada um, troque:
+     - o texto do título, instituição, detalhe e resultado
+     - o atributo data-pdf-href pelo caminho real do PDF em assets/pdfs/
+   e coloque os PDFs correspondentes em assets/pdfs/ (ex: certificado-01.pdf).
+
+Fora essas duas pendências, o conteúdo de texto de todas as páginas foi
+migrado integralmente do projeto React original.
